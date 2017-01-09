@@ -5,18 +5,21 @@ package uchidb;
  * @author aelmore
  */
 public class HW0Runner {
+	private static Containers<Integer, String> container = null;
 
-	//TODO you likely will need to add member variable
-	
+	private void SingleContainer() { }
+
 	// This class is a factory for a singleton containers class.
 	// https://www.tutorialspoint.com/java/java_using_singleton.htm
 	public static Containers<Integer, String> getContainers() {
-		// TODO fix this function
-		return null;
+		if (container == null) {
+			container = new SingleContainer<Integer, String>();
+		}
+		return container;
 	}
 
 
 	public static void main(String[] args){
-		
+
 	}
 }
